@@ -33,14 +33,14 @@ const GuGuDan = () => {
     return (
         // class, label - for 사용 불가
         // className, htmlFor 로 교체 사용해야함
-        <React.Fragment>
+        <>
             <div>{first} 곱하기 {second} 는?</div>
             <form onSubmit={onSubmit}>
                 <input ref={inputRef} onChange={onChange} value={value}/>
                 <button type="submit">입력!</button>
             </form>
             <div>{result}</div>
-        </React.Fragment>
+        </>
     )
 }
 
