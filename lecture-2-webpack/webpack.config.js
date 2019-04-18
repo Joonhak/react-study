@@ -3,15 +3,15 @@ const path = require('path');
 // webpack config
 module.exports = {
     name: 'wordRelay-setting',
-    mode: 'development', // production
-    devtool: 'eval', // production: hidden-source-map
+    mode: 'development', // <-> production
+    devtool: 'eval', // production - hidden-source-map
     resolve: {
         extensions: ['.js', '.jsx'],
     },
 
     entry: {
         app: ['./client'],
-    }, // 입력
+    }, // input
 
     module: {
         rules: [{
@@ -27,5 +27,5 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'app.js'
-    }, // 출력
+    }, // output
 };

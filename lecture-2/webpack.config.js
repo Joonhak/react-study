@@ -3,7 +3,7 @@ const path = require('path');
 // config
 module.exports = {
 	name: 'project',
-	mode: 'development', // production
+	mode: 'development', // <-> production
 	devtool: 'eval', // hidden-source-map in production
 	resolve: {
 		extensions: ['.js', '.jsx'],
@@ -11,11 +11,11 @@ module.exports = {
 
 	entry: {
 		app: ['./client'],
-	}, // entry files
+	}, // entry files ( input )
 
 	module: {
 		rules: [{
-			test: /\.jsx?/,
+			test: /\.jsx?$/,
 			loader: 'babel-loader',
 			options: {
 				presets: ['@babel/preset-env', '@babel/preset-react'],
