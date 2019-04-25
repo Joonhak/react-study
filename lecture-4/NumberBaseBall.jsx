@@ -8,6 +8,7 @@ function getNumbers() {
         const randomNumber = candidates.splice(Math.floor(Math.random() * (9 - i)), 1)[0];
         result.push(randomNumber);
     }
+    console.log(result); // Hooks는 render가 호출될 때 전체 코드를 호출한다!! < - > class Component는 render() 만 실행
     return result;
 }
 
@@ -34,7 +35,7 @@ const NumberBaseBall = () => {
             let strike = 0;
             let ball = 0;
             if (tries.length >= 9) {
-                setResult(`실패!! 답은 ${this.state.answer.join(',')}(이)었습니다!`);
+                setResult(`실패!! 답은 ${answer.join(',')}(이)었습니다!`);
                 alert('실패... 게임을 다시 시작합니다.');
 
                 setValue('');
@@ -75,6 +76,6 @@ const NumberBaseBall = () => {
         </>
     );
     
-}
+};
 
 export default NumberBaseBall;
