@@ -1,4 +1,4 @@
-import React, { useReducer, useCallback, useEffect } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import Table from './Table';
 
 const initialState = {
@@ -55,32 +55,16 @@ const TicTacToe = () => {
       return;
     }
     let win = false;
-    if (
-      tableData[row][0] === turn &&
-      tableData[row][1] === turn &&
-      tableData[row][2] === turn
-    ) {
+    if (tableData[row][0] === turn && tableData[row][1] === turn && tableData[row][2] === turn) {
       win = true;
     }
-    if (
-      tableData[0][cell] === turn &&
-      tableData[1][cell] === turn &&
-      tableData[2][cell] === turn
-    ) {
+    if (tableData[0][cell] === turn && tableData[1][cell] === turn && tableData[2][cell] === turn) {
       win = true;
     }
-    if (
-      tableData[0][0] === turn &&
-      tableData[1][1] === turn &&
-      tableData[2][2] === turn
-    ) {
+    if (tableData[0][0] === turn && tableData[1][1] === turn && tableData[2][2] === turn) {
       win = true;
     }
-    if (
-      tableData[0][2] === turn &&
-      tableData[1][1] === turn &&
-      tableData[2][0] === turn
-    ) {
+    if (tableData[0][2] === turn && tableData[1][1] === turn && tableData[2][0] === turn) {
       win = true;
     }
     if (win) {

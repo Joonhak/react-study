@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  useEffect,
-  useMemo,
-  useCallback
-} from 'react';
+import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import Ball from './Ball';
 
 function getWinNumbers() {
@@ -14,9 +8,7 @@ function getWinNumbers() {
     .map((v, i) => i + 1);
   const shuffle = [];
   while (candidate.length > 0) {
-    shuffle.push(
-      candidate.splice(Math.floor(Math.random() * candidate.length), 1)[0]
-    );
+    shuffle.push(candidate.splice(Math.floor(Math.random() * candidate.length), 1)[0]);
   }
   const bonusNumber = shuffle[shuffle.length - 1];
   const winNumbers = shuffle.slice(0, 6).sort((p, c) => p - c);
@@ -50,7 +42,7 @@ const Lotto = () => {
       timeouts.current.forEach(t => {
         clearTimeout(t);
       });
-    }
+    };
   }, [timeouts.current]); // 빈 배열이면 componentDidMount랑 동일
   // 배열에 요소가 있으면 componentDidMount랑 componentDidUpdate 둘 다 수행 ( return에서 componentDidUpdate )
 
@@ -68,14 +60,14 @@ const Lotto = () => {
   return (
     <>
       <div>당첨 숫자</div>
-      <div id="result">
+      <div id='result'>
         {winBalls.map(w => (
           <Ball key={w} number={w} />
         ))}
       </div>
       <div>보너스!</div>
       {bonus && <Ball number={bonus} />}
-      <button onClick={redo ? onClick : () => { }}>한번 더!</button>
+      <button onClick={redo ? onClick : () => {}}>한번 더!</button>
     </>
   );
 };
