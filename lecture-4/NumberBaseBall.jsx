@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Try from './Try';
 
 function getNumbers() {
@@ -17,6 +17,7 @@ const NumberBaseBall = () => {
   const [value, setValue] = useState('');
   const [answer, setAnswer] = useState(getNumbers());
   const [tries, setTries] = useState([]);
+  const inputRef = useRef(null);
 
   const onSubmit = e => {
     e.preventDefault();
@@ -55,6 +56,7 @@ const NumberBaseBall = () => {
         });
       }
     }
+    inputRef.current.focus();
   };
 
   const onChange = e => {
@@ -65,7 +67,7 @@ const NumberBaseBall = () => {
     <>
       <h1>{result}</h1>
       <form onSubmit={onSubmit}>
-        <input maxLength={4} value={value} onChange={onChange} />
+        <input maxLength={4} value={value} onChange={onChange} ref={inputRef} />
       </form>
       <ul>
         {tries.map((v, i) => {
