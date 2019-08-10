@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); }\n\nfunction _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar useState = React.useState,\n    useRef = React.useRef; // functional component\n// 단점: render 시 함수 자체가 다시 실행된다.\n\nvar GuGuDan = function GuGuDan() {\n  // state \n  var _useState = useState(Math.ceil(Math.random() * 9)),\n      _useState2 = _slicedToArray(_useState, 2),\n      first = _useState2[0],\n      setFirst = _useState2[1];\n\n  var _useState3 = useState(Math.ceil(Math.random() * 9)),\n      _useState4 = _slicedToArray(_useState3, 2),\n      second = _useState4[0],\n      setSecond = _useState4[1];\n\n  var _useState5 = useState(''),\n      _useState6 = _slicedToArray(_useState5, 2),\n      value = _useState6[0],\n      setValue = _useState6[1];\n\n  var _useState7 = useState(''),\n      _useState8 = _slicedToArray(_useState7, 2),\n      result = _useState8[0],\n      setResult = _useState8[1];\n\n  var inputRef = useRef(null);\n\n  var onChange = function onChange(e) {\n    setValue(e.target.value);\n  };\n\n  var onSubmit = function onSubmit(e) {\n    e.preventDefault();\n\n    if (parseInt(value) === first * second) {\n      setResult(value + ' 정답!');\n      setFirst(Math.ceil(Math.random() * 9));\n      setSecond(Math.ceil(Math.random() * 9));\n      setValue('');\n      inputRef.current.focus();\n    } else {\n      setResult('땡!');\n      setValue('');\n      inputRef.current.focus();\n    }\n  };\n\n  return (// class, label - for 사용 불가\n    // className, htmlFor 로 교체 사용해야함\n    React.createElement(React.Fragment, null, React.createElement(\"div\", null, first, \" \\uACF1\\uD558\\uAE30 \", second, \" \\uB294?\"), React.createElement(\"form\", {\n      onSubmit: onSubmit\n    }, React.createElement(\"input\", {\n      ref: inputRef,\n      onChange: onChange,\n      value: value\n    }), React.createElement(\"button\", {\n      type: \"submit\"\n    }, \"\\uC785\\uB825!\")), React.createElement(\"div\", null, result))\n  );\n};\n\nmodule.exports = GuGuDan;\n\n//# sourceURL=webpack:///./GuGuDan.jsx?");
+eval("function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); }\n\nfunction _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar useState = React.useState,\n    useRef = React.useRef; // functional component\n// 단점: render 시 함수 자체가 다시 실행된다.\n\nvar GuGuDan = function GuGuDan() {\n  // state\n  var _useState = useState(Math.ceil(Math.random() * 9)),\n      _useState2 = _slicedToArray(_useState, 2),\n      first = _useState2[0],\n      setFirst = _useState2[1];\n\n  var _useState3 = useState(Math.ceil(Math.random() * 9)),\n      _useState4 = _slicedToArray(_useState3, 2),\n      second = _useState4[0],\n      setSecond = _useState4[1];\n\n  var _useState5 = useState(''),\n      _useState6 = _slicedToArray(_useState5, 2),\n      value = _useState6[0],\n      setValue = _useState6[1];\n\n  var _useState7 = useState(''),\n      _useState8 = _slicedToArray(_useState7, 2),\n      result = _useState8[0],\n      setResult = _useState8[1];\n\n  var inputRef = useRef(null);\n\n  var onChange = function onChange(e) {\n    setValue(e.target.value);\n  };\n\n  var onSubmit = function onSubmit(e) {\n    e.preventDefault();\n\n    if (parseInt(value) === first * second) {\n      setResult(value + ' 정답!');\n      setFirst(Math.ceil(Math.random() * 9));\n      setSecond(Math.ceil(Math.random() * 9));\n      setValue('');\n      inputRef.current.focus();\n    } else {\n      setResult('땡!');\n      setValue('');\n      inputRef.current.focus();\n    }\n  };\n\n  return (// class, label - for 사용 불가\n    // className, htmlFor 로 교체 사용해야함\n    React.createElement(React.Fragment, null, React.createElement(\"div\", null, first, \" \\uACF1\\uD558\\uAE30 \", second, \" \\uB294?\"), React.createElement(\"form\", {\n      onSubmit: onSubmit\n    }, React.createElement(\"input\", {\n      ref: inputRef,\n      onChange: onChange,\n      value: value\n    }), React.createElement(\"button\", {\n      type: \"submit\"\n    }, \"\\uC785\\uB825!!\")), React.createElement(\"div\", null, result))\n  );\n};\n\nmodule.exports = GuGuDan;\n\n//# sourceURL=webpack:///./GuGuDan.jsx?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterable
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ReactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar GuGuDan = __webpack_require__(/*! ./GuGuDan */ \"./GuGuDan.jsx\");\n\nReactDom.render(React.createElement(GuGuDan, null), document.querySelector('#root'));\n\n//# sourceURL=webpack:///./client.jsx?");
+eval("var React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ReactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _require = __webpack_require__(/*! react-hot-loader/root */ \"./node_modules/react-hot-loader/root.js\"),\n    hot = _require.hot;\n\nvar GuGuDan = __webpack_require__(/*! ./GuGuDan */ \"./GuGuDan.jsx\");\n\nvar Hot = hot(GuGuDan);\nReactDom.render(React.createElement(Hot, null), document.querySelector('#root'));\n\n//# sourceURL=webpack:///./client.jsx?");
 
 /***/ }),
 
@@ -165,6 +165,41 @@ eval("/** @license React v16.8.6\n * react-dom.development.js\n *\n * Copyright 
 
 "use strict";
 eval("\n\nfunction checkDCE() {\n  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */\n  if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') {\n    return;\n  }\n\n  if (true) {\n    // This branch is unreachable because this function is only called\n    // in production, but the condition is true only in development.\n    // Therefore if the branch is still here, dead code elimination wasn't\n    // properly applied.\n    // Don't change the message. React DevTools relies on it. Also make sure\n    // this message doesn't occur elsewhere in this function, or it will cause\n    // a false positive.\n    throw new Error('^_^');\n  }\n\n  try {\n    // Verify that the code above has been dead code eliminated (DCE'd).\n    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);\n  } catch (err) {\n    // DevTools shouldn't crash React, no matter what.\n    // We should still report in case we break this code.\n    console.error(err);\n  }\n}\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/react-dom.development.js */ \"./node_modules/react-dom/cjs/react-dom.development.js\");\n}\n\n//# sourceURL=webpack:///./node_modules/react-dom/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _interopDefault(e) {\n  return e && \"object\" == _typeof(e) && \"default\" in e ? e[\"default\"] : e;\n}\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: !0\n});\n\nvar React = _interopDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nfunction AppContainer(e) {\n  return AppContainer.warnAboutHMRDisabled && (AppContainer.warnAboutHMRDisabled = !0, console.error(\"React-Hot-Loader: misconfiguration detected, using production version in non-production environment.\"), console.error(\"React-Hot-Loader: Hot Module Replacement is not enabled.\")), React.Children.only(e.children);\n}\n\nAppContainer.warnAboutHMRDisabled = !1;\n\nvar hot = function e() {\n  return e.shouldWrapWithAppContainer ? function (e) {\n    return function (n) {\n      return React.createElement(AppContainer, null, React.createElement(e, n));\n    };\n  } : function (e) {\n    return e;\n  };\n};\n\nhot.shouldWrapWithAppContainer = !1;\n\nvar areComponentsEqual = function areComponentsEqual(e, n) {\n  return e === n;\n},\n    setConfig = function setConfig() {},\n    cold = function cold(e) {\n  return e;\n},\n    configureComponent = function configureComponent() {};\n\nexports.AppContainer = AppContainer, exports.hot = hot, exports.areComponentsEqual = areComponentsEqual, exports.setConfig = setConfig, exports.cold = cold, exports.configureComponent = configureComponent;\n\n//# sourceURL=webpack:///./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js?");
+
+/***/ }),
+
+/***/ "./node_modules/react-hot-loader/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-hot-loader/index.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nif (false) {} else if (false) {} else if (typeof window === 'undefined') {\n  // this is just server environment\n  module.exports = __webpack_require__(/*! ./dist/react-hot-loader.production.min.js */ \"./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js\");\n} else if (true) {\n  module.exports = __webpack_require__(/*! ./dist/react-hot-loader.production.min.js */ \"./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js\");\n  module.exports.AppContainer.warnAboutHMRDisabled = true;\n  module.exports.hot.shouldWrapWithAppContainer = true;\n} else { var jsFeaturesPresent, evalAllowed; }\n\n//# sourceURL=webpack:///./node_modules/react-hot-loader/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/react-hot-loader/root.js":
+/*!***********************************************!*\
+  !*** ./node_modules/react-hot-loader/root.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("if (true) {\n  var hot = __webpack_require__(/*! ./index */ \"./node_modules/react-hot-loader/index.js\").hot;\n\n  if (false) { var parent, cache; } // setup hot for caller\n\n\n  exports.hot = hot(parent);\n} else {}\n\n//# sourceURL=webpack:///./node_modules/react-hot-loader/root.js?");
 
 /***/ }),
 
